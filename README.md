@@ -1,5 +1,5 @@
 (This baby "research project" was framed and solved with Microsoft Copilot... and some feedback from an actual human). I'm not an expert in AXIOM algorithm, but the code seems to work.
-Here are its result (described by itself). I find it interesting that it help framing a specific problem, and help with the coding part.
+Here are its result (described by itself). I find it interesting that it can help framing a specific problem, and implement the coding part.
 
 
 # axiom-bandit-controller

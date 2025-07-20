@@ -38,12 +38,12 @@ This confirms precise long-term goal alignment—even though none of the individ
 ## 🖼️ Visualization
 Reward Convergence to Goal
 
-![Graph of Agent Performance](arm_K_3_bis.jpg)
+![Graph of Agent Performance](arm_K_3_bis.png)
 
 The plot shows:
-- Cumulative reward trajectory converging to the internal goal of 0.67
-- Arm selection frequencies that reflect balanced exploitation
-- Evidence of reward-based feedback regulation
+- The estimated rewards for each arm
+- Arm variances
+- The final histogram of arm selection
   
 ## ⚙️ Key Mechanism
 The agent used a modified AXIOM policy with a single control line:

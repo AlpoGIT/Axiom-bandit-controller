@@ -17,3 +17,38 @@ This project solves that limitation.
 Modify the agent’s behavior with a single control term:
 ```python
 pragmatic = (self.internal_goal - np.mean(self.all_rewards)) * self.means
+```
+
+## 📈 Simulation Result: Goal Alignment at 0.67
+
+The agent was tested on a 3-armed bandit with true reward probabilities:
+
+```python
+true_means = [0.1, 0.3, 0.8]
+goal = 0.67
+```
+
+Using a trajectory-aware control loop, the agent dynamically regulated its behavior over 10,000 simulation steps, achieving an empirical average reward of:
+```python
+Final reward ≈ 0.671
+```
+
+This confirms precise long-term goal alignment—even though none of the individual arms delivers the target reward directly.
+
+## 🖼️ Visualization
+Reward Convergence to Goal
+
+![Graph of Agent Performance](arm_K_3_bis.jpg)
+
+The plot shows:
+- Cumulative reward trajectory converging to the internal goal of 0.67
+- Arm selection frequencies that reflect balanced exploitation
+- Evidence of reward-based feedback regulation
+  
+## ⚙️ Key Mechanism
+The agent used a modified AXIOM policy with a single control line:
+```python
+pragmatic = (self.internal_goal - np.mean(self.all_rewards)) * self.means
+```
+
+This dynamically adjusts the agent's preferences based on cumulative performance, allowing composite behavior to emerge through implicit policy mixing.
